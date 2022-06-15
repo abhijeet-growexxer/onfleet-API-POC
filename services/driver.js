@@ -23,7 +23,7 @@ const getDriverById = async(req,res) => {
 const createDriver = async(req,res) => {
     try {
         const result = await onfleetApi.workers.create(req.body);
-        res.send(result);
+        res.send(result.id);
     } catch (err) { 
         console.log(err);
     }

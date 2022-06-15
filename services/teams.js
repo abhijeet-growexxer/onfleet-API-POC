@@ -22,7 +22,7 @@ const getSingleTeam = async(req,res) => {
 const createTeam = async(req,res) => {
     try {
         const result = await onfleetApi.teams.create(req.body);
-        res.send(result);
+        res.send(result.id);
     } catch (err) { 
         console.log(err);
     }
